@@ -1,17 +1,3 @@
-### About Data:
-The data refers to details of State/UT-wise tree cover estimates. 
-Tree cover comprises of tree patches outside the recorded forest area 
-exclusive of forest cover and less than the minimum mappabe area (1 ha).
-
-### Approch:
-+ use gmplot lib to get long-lat details
-+ Either use google map to display plot or Find another method
-+ Area Figures are in Km
-
-
-
-
-
 Data Source
 - https://data.gov.in/catalog/stateut-wise-tree-cover-estimates?filters%5Bfield_catalog_reference%5D=91713&format=json&offset=0&limit=6&sort%5Bcreated%5D=desc
 - https://en.wikipedia.org/wiki/List_of_states_and_union_territories_of_India_by_crime_rate
