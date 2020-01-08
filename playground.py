@@ -21,25 +21,26 @@ def KnowIndiaOneByOneMap(map_shape_dframe,
                 cmap=cmap,
                 legend=True,
                 legend_kwds={'label':cb_label},
-                edgecolor='k')
+                edgecolor='w')
     plt.title(fig_title)
     if save_fig == True:
-        plt.savefig('/home/amarp/Documents/pyproj/ML/forFolio/india_voz/plots/'+fig_title+'.png', dpi=400)
+        plt.savefig('plots/'+fig_title+'.png', dpi=400)
     return
 
 
-
+#==============================================================================
 path_to_shpfile = 'India_Shapefiles/India.shp'
-path_to_dset = 'data/Road_Accidents_NatioanlHWay_2017-Annuxure_Tables_9.csv'
+path_to_dset = 'data/obesity_india.csv'
 var_df = pd.read_csv(path_to_dset)
 map_df = gpd.read_file(path_to_shpfile)
 
+
 KnowIndiaOneByOneMap(map_df,
                      var_df,
-                     parameter_to_map='Total Number of Road Accidents on National Highways -  2017',
-                     fig_title='State-UT wise National Highway Road Accidents-2017',
-                     cb_label='Number of Road Accidents',
-                     cmap='Reds',
+                     parameter_to_map='Female(%)',
+                     fig_title='State-UT wise Female(%) Obesity-NFHS2007',
+                     cb_label='Percentage of Female who are overweight or obese',
+                     cmap='YlOrRd',
                      save_fig=True)
 
 
